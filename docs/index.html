@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>OBR</title>
+<script src="image.js"></script>
+<script src="makebin.js"></script>
+<script src="makerow.js"></script>
+<script src="makecol.js"></script>
+<script src="recognition.js"></script>
+<script src="draw.js"></script>
+<script src="obr.js"></script>
+<style type="text/css">
+<!--
+body {
+  -webkit-text-size-adjust: 100%;
+}
+-->
+</style>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+<b>画像入力</b><br>
+<input type="file" id="selectfile" accept='image/*'><br>
+<hr>
+<b>処理一覧</b><br>
+<input type="button" value="Small()" onclick="Small()"/><br><br>
+<input type="button" value="Rotate()" onclick="Rotate()"/><br><br>
+<input type="button" value="OBR()" onclick="OBR()"/><br>
+<hr>
+<b>出力画像</b><br>
+<div id="OutputImage"></div>
+<hr>
+</body>
+</html>
