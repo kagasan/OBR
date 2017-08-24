@@ -1,34 +1,39 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>OBR</title>
+<title>お手軽点字リーダー</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png"/>
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="image.js"></script>
-<script src="makebin.js"></script>
-<script src="makerow.js"></script>
-<script src="makecol.js"></script>
-<script src="recognition.js"></script>
-<script src="draw.js"></script>
+<script src="script.js"></script>
 <script src="obr.js"></script>
-<style type="text/css">
-<!--
-body {
-  -webkit-text-size-adjust: 100%;
-}
--->
-</style>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<script src="binarize.js"></script>
+<script src="row.js"></script>
+<script src="col.js"></script>
+<script src="find.js"></script>
 </head>
 <body>
-<b>画像入力</b><br>
-<input type="file" id="selectfile" accept='image/*'><br>
-<hr>
-<b>処理一覧</b><br>
-<input type="button" value="Small()" onclick="Small()"/><br><br>
-<input type="button" value="Rotate()" onclick="Rotate()"/><br><br>
-<input type="button" value="OBR()" onclick="OBR()"/><br>
-<hr>
-<b>出力画像</b><br>
-<div id="OutputImage"></div>
-<hr>
+<div class = "TopDiv">
+	お手軽点字リーダー
+</div>
+<div class = "MainDiv" id="Main">
+この画像を保存して「画像選択」「実行」を試してみてください。
+<img src="img/50.png">
+</div>
+<div class = "BottomDiv">
+	<div class = "TakeDiv" id="B1">
+		<img src="img/cam.png"><p>画像選択</p><input type="file" id="selectfile" class="selectfile" accept='image/*' style="cursor:pointer;">
+	</div>
+	<div class = "RotateDiv" id="B2">
+		<img src="img/edit.png"><p>画像編集</p><a href="javascript:void(0);"onclick="Edit();"></a>
+	</div>
+	<div class = "RecognitionDiv" id="B3">
+		<img src="img/find.png" /><p>実行</p><a href="javascript:void(0);"onclick="OBR();"></a>
+	</div>
+	<div class = "HowToDiv" id="B4">
+		<img src="img/info.png"><p>各種情報</p><a href="javascript:void(0);"onclick="HowTo();"></a>
+	</div>
+</div>
 </body>
 </html>
