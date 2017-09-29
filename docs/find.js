@@ -183,6 +183,7 @@ function FindDot(){
 	if(debugmode)DebugFind();
 	document.getElementById("Main").innerHTML += "<font color='red'>うまくいかないときは？</font><br>";
 	document.getElementById("Main").innerHTML += "照明や撮影角度を変えてやり直してみてください。<br>";
+	document.getElementById("Main").innerHTML += "もしくは<a href='javascript:void(0);'onclick='PoseChange();'>回転させてもう一回。</a><br>";
 	document.getElementById("Main").innerHTML += "もしくは<a href='javascript:void(0);'onclick='ParaChange();'>パラメータを変えてもう一回。</a><br>";
 	//document.getElementById("Main").innerHTML += "もしくは<a href='javascript:void(0);'onclick='OBR(5, 7.0);'>パラメータを変えてもう一回。</a><br>";
 	document.getElementById("Main").innerHTML += "（端末によって性能が異なるため、全くうまくいかない端末もあります...。）<br>";
