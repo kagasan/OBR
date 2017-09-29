@@ -21,6 +21,24 @@ function OBR(){
 	FindDot();
 }
 
+function PoseChange(){
+	img.onload = function(){
+		OBR();
+		img.onload = function(){};
+	}
+	var canvas = document.createElement("canvas");
+	var ctx = canvas.getContext('2d');
+	canvas.width = img.height;
+	canvas.height = img.width;
+	ctx.save();
+	ctx.translate(canvas.width/2, canvas.height/2);
+	ctx.rotate(Math.PI/2);
+	ctx.translate(-img.width/2, -img.height/2);
+	ctx.drawImage(img, 0, 0);
+	ctx.restore();
+	img.src = canvas.toDataURL();
+}
+
 function ParaChange(){
 	ParaNum++;
 	if(ParaNum>=16)ParaNum = 0;
